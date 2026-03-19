@@ -1,0 +1,114 @@
+body {
+  background-color: rgb(244, 231, 216);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logo {
+  width: 60px;
+}
+
+#filtro {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #fff5f5, #ffecec);
+}
+
+.auth-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.auth-box input:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.4);
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b92c3a;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .navbar-brand {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .container .row {
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .auth-box {
+    max-width: 70%;
+  }
+
+  .navbar-nav {
+    gap: 1rem;
+  }
+
+  .container .row {
+    justify-content: center;
+  }
+
+  .card {
+    flex: 0 0 45%;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}

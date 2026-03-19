@@ -1,0 +1,144 @@
+body {
+  background-color: #f9f0e6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  background-color: #ff1e00;
+  text-align: center;
+  padding: 15px;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.busca {
+  margin-top: 10px;
+}
+
+.busca input {
+  padding: 6px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.busca button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #b0c9c2;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.busca button:hover {
+  background-color: #9cb8b0;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 220px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+.navegacao {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navegacao button {
+  background-color: #c4d7d1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navegacao button:hover {
+  background-color: #b0c9c2;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.fechar {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.fechar:hover {
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+}

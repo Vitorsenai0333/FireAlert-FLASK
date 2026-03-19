@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Alert - Denúncia</title>
+  <link rel="stylesheet" href="/static/styledenuncia.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://www.pngarts.com/files/10/Fire-Emoji-Transparent-Images.png" alt="Fire Alert Logo">
+      <h1>FIRE ALERT</h1>
+    </div>
+    <nav>
+      <a href="#">Blog</a>
+      <a href="#">Conteúdo</a>
+      <a href="#">Denúncia</a>
+      <a href="#">Mapa</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Denúncia de Incêndio</h2>
+      <form id="denunciaForm">
+        <div>
+          <label for="endereco">📍 Endereço da ocorrência</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Informe o local exato ou mais próximo" required>
+        </div>
+
+        <div>
+          <label for="descricao">📝 Descrição do ocorrido</label>
+          <textarea id="descricao" name="descricao" rows="4" placeholder="Explique o que aconteceu..." required></textarea>
+        </div>
+
+        <div>
+          <label for="imagem">📷 Envie uma imagem da ocorrência (opcional)</label>
+          <input type="file" id="imagem" accept="image/*">
+        </div>
+
+        <button type="submit">Enviar Denúncia</button>
+      </form>
+    </section>
+
+    <aside class="image-section">
+      <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="Ícone câmera">
+      <h3>Questionário</h3>
+      <p>Preencha os dados e ajude no monitoramento de incêndios.</p>
+
+      <div class="image-preview" id="preview"></div>
+    </aside>
+  </main>
+
+  <script src="/static/scriptdenuncia.js"></script>
+</body>
+</html>
